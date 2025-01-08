@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Echo</title>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="main.css" />
+
+		<script src="https://engine-js.glitch.me/modules/engine.js" defer></script>
+		<!-- <script src="/socket.io/socket.io.js" defer></script> -->
+		<script src="script.js" defer></script>
+		<script src="data.js" defer></script>
+	</head>
+	<body>
+		<img class="mainLogo" src="https://cdn.glitch.global/74da3bde-3b8c-415d-917a-158276350589/LogoGold.png?v=1715739654898" alt="GoofyBox Studios Logo" draggable="false">
+
+		<span id="ping">Ping: Loading...</span>
+
+		<div class="content">
+			<button id="addKeybindButton">add bind</button>
+			<button id="removeKeybindButton">remove bind</button>
+			<button id="defaultKeybindsButton">load default binds</button>
+			<button id="hideMouse">capture mouse</button>
+			
+			<div id="keybinds"></div>
+		</div>
+
+		<div id="notifications">
+			<div id="newHostNotification" class="notification hidden"></div>
+		</div>
+
+		<div id="keyCodePrompt" class="promptHidden">
+			<label for="keyCodeReplaceInput">This key:</label><br>
+			<input placeholder="press any key here!" type="text" id="keyCodeInput" class="SUPERROUNDED" name="keyCodeInput"><br>
+			<label for="keyCodeReplaceInput">Will get replaced with this key:</label><br>
+			<input placeholder="press any key here!" type="text" id="keyCodeReplaceInput" class="SUPERROUNDED" name="keyCodeReplaceInput"><br>
+
+			<br>
+
+			<button id="addKeyCode" class="BUTTON HOVER_ENLARGE CLICK_SHRINK SUPERROUNDED SMOOTH_ALL"> Add </button>
+			<button id="cancelAddKeyCode" class="BUTTON HOVER_ENLARGE CLICK_SHRINK SUPERROUNDED SMOOTH_ALL"> Cancel </button>
+		</div>
+
+		<div id="keyRemovePrompt" class="promptHidden">
+			<label for="keyRemoveInput">enter a key bind and it will be removed:</label><br>
+			<input placeholder="press any key here!" type="text" id="keyRemoveInput" class="SUPERROUNDED" name="keyRemoveInput"><br>
+
+			<br>
+
+			<button id="removeCode" class="BUTTON HOVER_ENLARGE CLICK_SHRINK SUPERROUNDED SMOOTH_ALL"> Remove </button>
+			<button id="cancelRemoveCode" class="BUTTON HOVER_ENLARGE CLICK_SHRINK SUPERROUNDED SMOOTH_ALL"> Cancel </button>
+		</div>
+	</body>
+</html>

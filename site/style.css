@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+	--background-dark: #07393C;
+	--background-light: #90DDF0;
+	--border-colour: #0A090C;
+	--button-green: #70EE9C;
+	--button-red: #F79F79;
+}
+
+html {
+	position: relative;
+}
+
+#ping {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+}
+
+body {
+	min-width: 100vw;
+	min-height: 100vw;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(#444444, #222222);
+}
+
+.mainLogo {
+	width: 80vw;
+	max-width: 1200px;
+	image-rendering: pixelated;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	user-select: none;
+}
+
+.content {
+	background: rgba(0, 0, 0, 0.5);
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 30px;
+	margin-bottom: 130px;
+	padding-top: 10px;
+	padding-bottom: 80px;
+	border: 10px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+
+	padding: 20px;
+
+	width: 75vw;
+	height: 75vw;
+
+	max-width: 75vh;
+	max-height: 75vh;
+
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+
+	box-sizing: border-box;
+}
+
+#keybinds {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: "Press Start 2P";
+
+	color: white;
+	font-size: 1.1em;
+	line-height: 1.25em;
+}
+
+#keybinds span {
+	text-align: center;
+}
+
+button {
+	font-family: monospace;
+	font-size: 2em;
+	border-width: 4px;
+	border-radius: 4px;
+}
+
+button:hover {
+	transform: scale(1.01);
+}
+
+button:active {
+	transform: scale(0.99);
+}
+
+#addKeybindButton, #defaultKeybindsButton, #addKeyCode, #removeCode {
+	color: black;
+	background-color: var(--button-green);
+}
+
+#cancelAddKeyCode, #removeKeybindButton, #cancelRemoveCode {
+	color: black;
+	background-color: var(--button-red);
+}
+
+/* Prompts */
+#keyCodePrompt {
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	background: white;
+	border: 10px solid black;
+	border-radius: 30px;
+	padding: 50px;
+	text-align: center;
+
+	transform: translate(-50%, -50%);
+}
+
+#keyRemovePrompt {
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	background: white;
+	border: 10px solid black;
+	border-radius: 30px;
+	padding: 50px;
+	text-align: center;
+
+	transform: translate(-50%, -50%);
+}
+
+#keyCodeInput, #keyCodeReplaceInput, #keyRemoveInput {
+	color: black;
+	background-color: #ffffef;
+}
+
+#keyCodePrompt.promptHidden, #keyRemovePrompt.promptHidden {
+	transform: translate(-50%, calc(100vh - 50%));
+}
+
+
+.hidden {
+	display: none;
+}
+
+
+
+/* Notifications */
+.notification {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 4px;
+	min-width: 200px;
+	min-height: 75px;
+
+	position: relative;
+	left: 0;
+
+	transition: left 0.25s;
+
+	text-align: center;
+	padding: 10px;
+}
+
+.notification.hidden {
+	display: block;
+
+	left: 400px;
+}
+
+.notification h2 {
+	margin-top: 0;
+}
+
+#notifications {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	padding: 10px;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	gap: 10px;
+}
